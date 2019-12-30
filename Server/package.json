@@ -1,0 +1,23 @@
+{
+  "name": "water_drop",
+  "version": "1.0.0",
+  "description": "water_drop_project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/q990724/waterDrop.git"
+  },
+  "keywords": [
+    "公益",
+    "水滴公益"
+  ],
+  "author": "www_chk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/q990724/waterDrop/issues"
+  },
+  "homepage": "https://github.com/q990724/waterDrop#readme"
+}
