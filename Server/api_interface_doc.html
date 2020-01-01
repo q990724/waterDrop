@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>水滴公益接口文档-ApiPost</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="接口文档,ApiPost">
+<meta name="description" content="本文档由可直接生成文档的API调试、管理工具ApiPost生成">
+<!--自适应声明部分-->
+<meta name="applicable-device" content="pc" />
+<link rel="shortcut icon" href="https://console.apipost.cn/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://img.cdn.apipost.cn/statics/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://img.cdn.apipost.cn/statics/build-in/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://img.cdn.apipost.cn/statics/build-in/bootstrap/css/document.css?v=2152">
+<link rel="stylesheet" type="text/css" href="https://img.cdn.apipost.cn/statics/build-in/bootstrap/css/markdown.css?v=1326">
+<link rel="stylesheet" type="text/css" href="https://img.cdn.apipost.cn/statics/build-in/nprogress-0.2.0/nprogress.css">
+<link rel="stylesheet" type="text/css" href="https://console.apipost.cn/doc/statics/css/doc.css">
+<script type="text/javascript" src="https://img.cdn.apipost.cn/statics/build-in/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://img.cdn.apipost.cn/statics/build-in/clipboard.js-master/clipboard.min.js"></script>
+<script type="text/javascript" src="https://img.cdn.apipost.cn/statics/build-in/nprogress-0.2.0/nprogress.js"></script>
+<script type="text/javascript" src="https://img.cdn.apipost.cn/statics/build-in/bootstrap/js/bootstrap.js"></script>
+<script language="javascript">
+	$(function(){
+		let _clipboard = new ClipboardJS('.api-test-send-btn');
+
+        _clipboard.on('success', function(e) {
+            e.clearSelection();
+        });
+
+        _clipboard.on('error', function(e) {
+            console.log(e);
+        });
+
+        $(document).on('click', '.api-test-send-btn', function(){
+        	let _href = $(this).attr('data-href');
+        	window.open(_href);
+        });
+
+		let _left_menus = [{"parent_id":"0","folder_id":"50818","name":"\u9996\u9875\u63a5\u53e3","item":[{"apiid":"292990","name":"\u63a8\u8350\u5bfc\u6f14","sort":"0","folder_id":"50818"},{"apiid":"292828","name":"\u63a8\u8350\u6587\u7ae0","sort":"0","folder_id":"50818"},{"apiid":"289311","name":"\u8f6e\u64ad\u56fe\u4fe1\u606f","sort":"0","folder_id":"50818"}]},{"parent_id":"0","folder_id":"50820","name":"\u4f20\u64ad\u5b98\u4e4b\u5bb6\u63a5\u53e3","item":[{"apiid":"292975","name":"\u4e3a\u6307\u5b9a\u6587\u7ae0\u70b9\u8d5e","sort":"0","folder_id":"50820"},{"apiid":"292883","name":"\u5206\u9875\u67e5\u8be2\u6587\u7ae0","sort":"0","folder_id":"50820"},{"apiid":"292870","name":"\u67e5\u8be2\u4e3b\u9898\u680f\u76ee","sort":"0","folder_id":"50820"},{"apiid":"292869","name":"\u67e5\u8be2\u4e13\u680f\u9879\u76ee","sort":"0","folder_id":"50820"}]},{"parent_id":"0","folder_id":"50823","name":"\u89c6\u9891\u6848\u4f8b","item":[{"apiid":"292996","name":"\u641c\u7d22\u4f5c\u54c1","sort":"0","folder_id":"50823"},{"apiid":"292960","name":"\u4e3a\u6307\u5b9a\u89c6\u9891\u70b9\u8d5e","sort":"0","folder_id":"50823"},{"apiid":"292956","name":"\u6839\u636eid\u67e5\u8be2\u6307\u5b9a\u89c6\u9891\u8be6\u7ec6\u4fe1\u606f","sort":"0","folder_id":"50823"},{"apiid":"292949","name":"\u67e5\u8be2\u89c6\u9891\u5217\u8868\u4fe1\u606f","sort":"0","folder_id":"50823"},{"apiid":"292904","name":"\u67e5\u8be2\u7b5b\u9009\u6761\u4ef6","sort":"0","folder_id":"50823"}]},{"parent_id":"0","folder_id":"50833","name":"\u5bfc\u6f14\u5217\u8868","item":[{"apiid":"292987","name":"\u67e5\u8be2\u6307\u5b9a\u5bfc\u6f14\u4fe1\u606f","sort":"0","folder_id":"50833"},{"apiid":"292985","name":"\u67e5\u8be2\u5bfc\u6f14\u5217\u8868\u4fe1\u606f","sort":"0","folder_id":"50833"},{"apiid":"292979","name":"\u67e5\u8be2\u5bfc\u6f14\u7c7b\u522b","sort":"0","folder_id":"50833"}]},{"parent_id":"0","folder_id":"50835","name":"\u670d\u52a1\u6d41\u7a0b","item":[{"apiid":"292991","name":"\u67e5\u8be2\u670d\u52a1\u6d41\u7a0b\u89c6\u9891\u548c\u56fe\u7247\u94fe\u63a5","sort":"0","folder_id":"50835"}]},{"parent_id":"0","folder_id":"50836","name":"\u8ba2\u5355","item":[{"apiid":"293008","name":"\u53d6\u6d88\u6307\u5b9a\u8ba2\u5355","sort":"0","folder_id":"50836"},{"apiid":"293005","name":"\u6839\u636e\u673a\u6784\u540d\u79f0\u641c\u7d22\u8ba2\u5355","sort":"0","folder_id":"50836"},{"apiid":"292998","name":"\u67e5\u8be2\u6240\u6709\u8ba2\u5355","sort":"0","folder_id":"50836"}]}];
+		let _init_apiid = 293008;
+
+		if(window.location.hash){
+			let _hash_apiid = parseInt(window.location.hash.substr(1));
+			_init_apiid = _hash_apiid ? _hash_apiid : _init_apiid;
+		}
+
+		//收缩文档页面左侧菜单
+        let _is_pull = 0;
+        $('.document-pull-left').click(function(){
+            _is_pull = !_is_pull;
+
+            if(_is_pull){
+                $(".book-summary").css("left","-300px");
+                $(".book-body").css("left","0");
+            }else{
+                $(".book-summary").css("left","0");
+                $(".book-body").css("left","300px");
+            }
+        });
+
+        //文档上一页
+        $('.navigation-prev').click(function(){
+        	// let _length = $('.load-api-btn').length;
+        	let _index = Math.max($('.load-api-btn').index($('.load-api-btn.active')) - 1, 0);
+        	let _apiid = parseInt($('.load-api-btn').eq(_index).attr('data-id'));
+
+        	_load_document(_apiid);
+        });
+
+        //文档下一页
+        $('.navigation-next').click(function(){
+        	let _length = $('.load-api-btn').length;
+        	let _index = Math.min($('.load-api-btn').index($('.load-api-btn.active')) + 1, _length - 1);
+        	let _apiid = parseInt($('.load-api-btn').eq(_index).attr('data-id'));
+
+        	_load_document(_apiid);
+        });
+
+		//分享文档地址
+        $(".export-document-link-btn").click(function() {
+            $(this).attr('data-clipboard-text', 'https://console.apipost.cn/doc/44313?du_id=0');
+            let _clipboard = new ClipboardJS('.export-document-link-btn');
+            _clipboard.on('success', function(e) {
+                alert('文档地址复制成功，您可以转发给您的小伙伴啦~');
+                e.clearSelection();
+                return true;
+            });
+
+            _clipboard.on('error', function(e) {
+                alert('复制失败，请重试');
+                return false;
+            });
+        });
+
+		//加载左侧菜单
+		_load_menu();
+		$('.api-search-word').on('input change', function(){
+			_load_menu();
+		});
+
+		$('.document-summary').on('click', '.load-api-btn', function(){
+			let _this = this;
+			let _apiid = parseInt($(_this).attr('data-id'));
+			_load_document(_apiid);
+		}).on('click', 'a[data-type="category"]', function(){
+			$(this).next('.articles').toggle();
+
+			if($(this).children('.fa').eq(0).hasClass('fa-folder-open-o')){
+				$(this).children('.fa').eq(0).addClass('fa-folder-o').removeClass('fa-folder-open-o');
+			}else{
+				$(this).children('.fa').eq(0).addClass('fa-folder-open-o').removeClass('fa-folder-o');
+			}
+		}).on('click', '.load-sub-btn', function () {
+            let _this = this;
+            let _folder_id = parseInt($(_this).attr('data-id'));
+            $('.sub-folder-' + _folder_id).toggle();
+            if($(_this).children('.fa').eq(0).hasClass('fa-folder-open-o')){
+                $(_this).children('.fa').eq(0).addClass('fa-folder-o').removeClass('fa-folder-open-o');
+            }else{
+                $(_this).children('.fa').eq(0).addClass('fa-folder-open-o').removeClass('fa-folder-o');
+            }
+        });
+
+		//加载右侧文档
+		_load_document(_init_apiid);
+
+		//私有函数
+		//加载右侧文档函数
+		function _load_document(_apiid){
+			NProgress.start();
+			$('.chapter').removeClass('active');
+			$('.chapter[data-id="'+_apiid+'"]').addClass('active');
+			$('.page-wrapper').addClass('hide');
+			$('.page-wrapper[tabindex="'+_apiid+'"]').removeClass('hide');
+			$('.load-api-btn').removeClass('active');
+			$('.load-api-btn[data-id="'+_apiid+'"]').addClass('active');
+
+			//隐藏空的元素
+			$('.document-block-div').each(function(){
+				let _this = this;
+				let _length = $(_this).find('tbody').eq(0).children().length;
+				// console.log(_length);
+				if(!_length){
+					$(_this).hide();
+				}
+			});
+
+			window.location.hash='#' + _apiid;
+			NProgress.done();
+		}
+
+		//加载左侧菜单函数
+        function _load_menu(){
+        	let _keyword = $.trim($('.api-search-word').val());
+
+        	//左侧渲染
+	        $('.document-summary').empty();
+	        for(let _x in _left_menus){
+	            if(_left_menus[_x].item.length > 0){
+                    let _html = '<li class="chapter">';
+                    _html += '   <a href="javascript:;" class="' + (parseInt(_left_menus[_x].folder_id) == -1 ? 'default-folder':'') + '" data-type="category" data-id="' + _left_menus[_x].folder_id + '"><i class="fa fa-folder-open-o" aria-hidden="true"></i><strong>' + _left_menus[_x].name + '</strong></a>';
+                    _html += '   <ul class="articles">';
+
+                    for(let _l in _left_menus[_x].item){
+                        if(!_left_menus[_x].item[_l].hasOwnProperty('apiid')){
+                            let _sub_api_html = '';
+                            for(let _s in _left_menus[_x].item[_l].item){
+                                if(_left_menus[_x].item[_l].item[_s].name.indexOf(_keyword) > -1 || _keyword == '') {
+                                    _sub_api_html += '<li class="chapter text-indent-2 ' + (parseInt(_left_menus[_x].item[_l].item[_s].apiid) == _init_apiid ? 'active' : '') + '" data-id="' + _left_menus[_x].item[_l].item[_s].apiid + '"><a class="load-api-btn" href="#' + _left_menus[_x].item[_l].item[_s].apiid + '" data-type="api" data-id="' + _left_menus[_x].item[_l].item[_s].apiid + '"><i class="fa fa-file-text-o" aria-hidden="true"></i>' + _left_menus[_x].item[_l].item[_s].name + ' </a> </li>';
+                                }
+                            }
+
+                            if(_sub_api_html != ''){
+                                _html += '<li class="chapter" data-id="' + _left_menus[_x].item[_l].folder_id + '"><a class="load-sub-btn" href="javascript:;" data-type="api" data-id="' + _left_menus[_x].item[_l].folder_id + '"><i class="fa fa-folder-open-o" aria-hidden="true"></i>' + _left_menus[_x].item[_l].name + ' </a> </li>';
+                                _html += '<ul class="sub-folder-' + _left_menus[_x].item[_l].folder_id + '">';
+                                _html += _sub_api_html;
+                                _html += '</ul>';
+                            }
+                        }else{
+                            if(_left_menus[_x].item[_l].name.indexOf(_keyword) > -1 || _keyword == ''){
+                                _html += '<li class="chapter ' + (parseInt(_left_menus[_x].item[_l].apiid) == _init_apiid ? 'active':'') + '" data-id="' + _left_menus[_x].item[_l].apiid + '"><a class="load-api-btn" href="#' + _left_menus[_x].item[_l].apiid + '" data-type="api" data-id="' + _left_menus[_x].item[_l].apiid + '"><i class="fa fa-file-text-o" aria-hidden="true"></i>' + _left_menus[_x].item[_l].name + ' </a> </li>';
+                            }
+                        }
+                    }
+                    _html += '   </ul>';
+                    _html += '</li>';
+
+                    $('.document-summary').append(_html);
+                }
+	        }
+        }
+	});
+</script>
+<style type="text/css">
+	/*common.css*/
+	*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:none;-webkit-touch-callout:none;-webkit-font-smoothing:antialiased;font-family:..., "PingFangSC-Regular", "sans-serif", "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;font-size: .9rem!important ;  outline: none!important;}
+	html{outline: none!important;}
+	body{background:#f5f7fa}
+	a{text-decoration: none}
+	a:hover{text-decoration: none}
+	img{border:0;}
+	a:focus,button:focus{box-shadow: none!important;}
+	table,td,th{table-layout:fixed;word-break:break-all; vertical-align: top}
+
+	/*共用按钮*/
+	/*橙色*/
+	.btn-orange{ background-color: #ff5722!important; border-color: #ff5722!important;color:#fff;}
+	.btn-orange:hover{background-color: #f76b40!important;color:#fff;}
+
+	/*灰色*/
+	.btn-gray{background-color: #e9ecef!important;color: #6c757d!important;}
+	.btn-gray:hover{background-color: #dee2e6!important;color: #6c757d!important;}
+    .load-api-btn{position: relative}
+    .load-api-btn .api-modify-tips{width: 6px;height: 6px;border-radius: 50%;padding: 0!important;background: #dc3545!important;position: absolute!important;left: 25px;top: 8px;display: none}
+    .load-api-btn:hover{color:#dc3545!important;}
+    .api-name-class:hover{text-decoration: none}
+    .api-name-class .btn-gray{margin-left: 15px;padding: 3px 8px;display: inline-block;}
+    .api-name-class .btn-gray:hover{text-decoration: none!important;}
+    /*.text-indent-2{text-indent: 1em}*/
+    .request_raw_body_desc_textarea{width: 100%; border: 0; height: auto}
+	/*弹窗*/
+	.modal.show .modal-dialog{top:180px!important;}
+	.modal-title{font-size: 1.05rem!important}
+	.modal-header {display: -ms-flexbox;display: flex;-ms-flex-align: start;align-items: flex-start;-ms-flex-pack: justify;justify-content: space-between;background-color: #353644;padding: 10px 20px;color: #fff;border-top-left-radius: 0!important;border-top-right-radius: 0!important;}
+	button.close{font-size: 18px!important; color: #fff!important}
+	.modal-mm{max-width: 370px}
+	.modal-body .alert-warning {width: 100%;}
+	/*图标 /*/
+    .markdown-section blockquote{padding: 10px 15px;background: #f7f7f7;}
+	.fa{margin-right:8px}
+
+    /*默认文件夹默认隐藏*/
+    .default-folder{visibility: hidden;margin-top: -38px;}
+    .chapter:hover .default-folder{visibility: visible;margin-top: 0px;}
+    .hidden-value{display: none;}
+</style>
+</head>
+<body>
+<div class="book">
+  	<div class="book-summary">
+    	<div id="book-search-input" role="search">
+      		<input type="text" class="api-search-word" placeholder="输入关键词搜索文档">
+      	</div>
+    	<nav>
+      		<ul class="summary document-summary"></ul>
+    	</nav>
+  	</div>
+  	<div class="book-body">
+    	<div class="no-apis"></div>
+    	<div class="body-inner">
+	      	<div class="book-header">
+		        <div class="dropdown">
+		          	<a class="btn pull-left document-pull-left" href="javascript:;">&nbsp;
+		            	<i class="fa fa-align-justify"></i></a>
+		          	<a class="btn" href="https://console.apipost.cn/doc/createHtml/44313?du_id=0" target="_blank">
+		            	<i class="fa fa-html5" aria-hidden="true"></i>导出HTMl</a>
+		            	<!-- <a class="dropdown-item export-md-btn" href="javascript:;"><i class="fa fa-file-code-o" aria-hidden="true"></i>导出MD</a> -->
+		            <a class="btn export-btn" href="https://console.apipost.cn/doc/createMD/44313?du_id=0" target="_blank">
+		            	<i class="fa fa-file-code-o" aria-hidden="true"></i>导出MarkDown</a>
+		          	<a class="btn export-btn" href="https://console.apipost.cn/doc/createDocx/44313?du_id=0" target="_blank">
+		            	<i class="fa fa-file-word-o" aria-hidden="true"></i>导出Doc</a>
+		            <a class="btn export-btn" href="https://console.apipost.cn/doc/createPdf/44313?du_id=0" target="_blank">
+		            	<i class="fa fa-file-pdf-o" aria-hidden="true"></i>导出Pdf</a>
+		          	<a class="btn export-document-link-btn" href="javascript:;">
+		            	<i class="fa fa-external-link" aria-hidden="true"></i>复制文档地址</a>
+		        </div>
+		        <h1><!-- 水滴公益接口文档 --></h1>
+	    	</div>
+	    	                        	    	<div class="page-wrapper hide" tabindex="293008" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>取消指定订单 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=293008" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;293008&quot;,&quot;name&quot;:&quot;取消指定订单&quot;,&quot;url&quot;:&quot;{{url}}\/admin\/order\/cancel&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;id&quot;,&quot;value&quot;:&quot;1&quot;,&quot;not_null&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/admin/order/cancel</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>id</th>
+			                  			<td>1</td>
+                                        <td>必填</td>
+			                  			<td>-</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success"
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="293005" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>根据机构名称搜索订单 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=293005" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;293005&quot;,&quot;name&quot;:&quot;根据机构名称搜索订单&quot;,&quot;url&quot;:&quot;{{url}}\/admin\/order\/search&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;val&quot;,&quot;value&quot;:&quot;水滴公益&quot;,&quot;not_null&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;机构名称&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/admin/order/search</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>val</th>
+			                  			<td>水滴公益</td>
+                                        <td>必填</td>
+			                  			<td>机构名称</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oid</th>
+			                  			<td colspan="2">订单唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">purpose</th>
+			                  			<td colspan="2">视频用途</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">type</th>
+			                  			<td colspan="2">视频类型</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">duration</th>
+			                  			<td colspan="2">视频时长</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">cycle_start</th>
+			                  			<td colspan="2">开始制作时间</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">cycle_end</th>
+			                  			<td colspan="2">结束制作时间</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">company_id</th>
+			                  			<td colspan="2">订单机构唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">status</th>
+			                  			<td colspan="2">订单状态码(1: 等待导演接受,2: 等待制作,3: 正在制作中,4: 制作完成,5: 取消制作)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_id</th>
+			                  			<td colspan="2">订单机构唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_number</th>
+			                  			<td colspan="2">订单机构编号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_name</th>
+			                  			<td colspan="2">订单机构名称</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_type</th>
+			                  			<td colspan="2">订单机构类型</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_liaison</th>
+			                  			<td colspan="2">订单机构联系人</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_phone</th>
+			                  			<td colspan="2">订单机构联系电话</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_email</th>
+			                  			<td colspan="2">订单机构联系邮箱</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "me": {
+            "oc_id": 1,
+            "oc_number": 1001,
+            "oc_name": "水滴公益",
+            "oc_type": "基金会",
+            "oc_liaison": "程方远",
+            "oc_phone": "17602250724",
+            "oc_email": "q664625200@163.com"
+        },
+        "list": [
+            {
+                "oid": 1,
+                "purpose": "宣传",
+                "type": "动画",
+                "duration": "3分钟",
+                "cycle_start": 1577896814899,
+                "cycle_end": 1580313600000,
+                "company_id": 1001,
+                "status": 1
+            }
+        ]
+    }
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292998" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询所有订单 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292998" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292998&quot;,&quot;name&quot;:&quot;查询所有订单&quot;,&quot;url&quot;:&quot;{{url}}\/admin\/order\/list&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/admin/order/list</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>multipart/form-data</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oid</th>
+			                  			<td colspan="2">订单唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">purpose</th>
+			                  			<td colspan="2">视频用途</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">type</th>
+			                  			<td colspan="2">视频类型</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">duration</th>
+			                  			<td colspan="2">视频长度</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">cycle_start</th>
+			                  			<td colspan="2">开始制作时间</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">cycle_end</th>
+			                  			<td colspan="2">结束制作时间</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_id</th>
+			                  			<td colspan="2">订单机构唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_number</th>
+			                  			<td colspan="2">订单机构编号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_name</th>
+			                  			<td colspan="2">订单机构名称</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_type</th>
+			                  			<td colspan="2">订单机构类型</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_liaison</th>
+			                  			<td colspan="2">订单机构联络人</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_phone</th>
+			                  			<td colspan="2">订单机构联络电话</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">oc_email</th>
+			                  			<td colspan="2">订单机构联络邮箱</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "oid": 1,
+            "purpose": "宣传",
+            "type": "动画",
+            "duration": "3分钟",
+            "cycle_start": 1577896814899,
+            "cycle_end": 1580313600000,
+            "company_id": 1001,
+            "oc_id": 1,
+            "oc_number": 1001,
+            "oc_name": "水滴公益",
+            "oc_type": "基金会",
+            "oc_liaison": "程方远",
+            "oc_phone": "17602250724",
+            "oc_email": "q664625200@163.com"
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292996" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>搜索作品 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292996" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292996&quot;,&quot;name&quot;:&quot;搜索作品&quot;,&quot;url&quot;:&quot;{{url}}\/work\/search&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;val&quot;,&quot;value&quot;:&quot;灵山&quot;,&quot;not_null&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/work/search</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>val</th>
+			                  			<td>灵山</td>
+                                        <td>必填</td>
+			                  			<td>-</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292991" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询服务流程视频和图片链接 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292991" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292991&quot;,&quot;name&quot;:&quot;查询服务流程视频和图片链接&quot;,&quot;url&quot;:&quot;{{url}}\/process&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/process</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>GET</code>
+                                                                        	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pro_id</th>
+			                  			<td colspan="2">服务流程步骤唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pro_url</th>
+			                  			<td colspan="2">服务流程链接</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "pro_id": 1,
+            "pro_url": "https:\/\/v.qq.com\/iframe\/player.html?vid=e0382ubp1at&tiny=0&auto=0"
+        },
+        {
+            "pro_id": 2,
+            "pro_url": "https:\/\/v.qq.com\/iframe\/player.html?vid=v03825rzu03&tiny=0&auto=0"
+        },
+        {
+            "pro_id": 3,
+            "pro_url": "images\/process\/58c10a2324304.jpg"
+        },
+        {
+            "pro_id": 4,
+            "pro_url": "images\/process\/58c10a32814a4.jpg"
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292990" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>推荐导演 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292990" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292990&quot;,&quot;name&quot;:&quot;推荐导演&quot;,&quot;url&quot;:&quot;{{url}}\/recDirector&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/recDirector</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>GET</code>
+                                                                        	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292987" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询指定导演信息 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292987" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292987&quot;,&quot;name&quot;:&quot;查询指定导演信息&quot;,&quot;url&quot;:&quot;{{url}}\/director\/detail&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;id&quot;,&quot;value&quot;:&quot;3&quot;,&quot;not_null&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;导演唯一id&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;},{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/director/detail</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>id</th>
+			                  			<td>3</td>
+                                        <td>必填</td>
+			                  			<td>导演唯一id</td>
+			                  		</tr>
+			                  				              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">did</th>
+			                  			<td colspan="2">导演唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">director_class</th>
+			                  			<td colspan="2">导演分类编号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dname</th>
+			                  			<td colspan="2">导演名称</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">avatar</th>
+			                  			<td colspan="2">导演照片</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">goodAt</th>
+			                  			<td colspan="2">擅长领域</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">cooperation</th>
+			                  			<td colspan="2">合作机构</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">worksCount</th>
+			                  			<td colspan="2">作品数量</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">experience</th>
+			                  			<td colspan="2">拍摄经验</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">intr</th>
+			                  			<td colspan="2">导演简介</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">repWorks</th>
+			                  			<td colspan="2">个人作品编号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dc_id</th>
+			                  			<td colspan="2">导演分类编号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dc_name</th>
+			                  			<td colspan="2">导演类别名称</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">myWorks</th>
+			                  			<td colspan="2">作品集详情</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">id</th>
+			                  			<td colspan="2">作品唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">name</th>
+			                  			<td colspan="2">作品名称</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">intr</th>
+			                  			<td colspan="2">作品简介</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pic</th>
+			                  			<td colspan="2">作品图片</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">likes</th>
+			                  			<td colspan="2">作品喜欢人数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">watchs</th>
+			                  			<td colspan="2">作品观看人数</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "did": 3,
+            "director_class": 2,
+            "dname": "陆智恒",
+            "avatar": "images\/director\/director_home_58a6b08f576be.jpg",
+            "goodAt": "助残,其他",
+            "cooperation": "中国发展简报,李嘉诚基金会,广州团市委等",
+            "worksCount": 30,
+            "experience": 2,
+            "intr": "进入颗粒两年多以来，创作出不同形式的多个公益领域作品高达30余部，其中涵盖了理念宣传，机构宣传，项目宣传，活动宣传等等多种类别。效能与品质并重的他，一直坚持创作出受众与公众都为之共情的作品。",
+            "repWorks": "2,3",
+            "dc_id": 2,
+            "dc_name": "资深导演",
+            "myWorks": [
+                [
+                    {
+                        "id": 2,
+                        "name": "中国慈善联合会第五届慈展会快闪宣传片",
+                        "intr": "中国公益慈善项目交流展示会（简称“慈展会”），由中华人民共和国民政部、国务院国有资产监督管理委员会、中华全国工商联合会、广东省人民政府、深圳市人民政府、中国慈善联合会共同主办。",
+                        "pic": "images\/works\/case_58abfcf2c1c02.png",
+                        "likes": 37,
+                        "watchs": 1211
+                    }
+                ],
+                [
+                    {
+                        "id": 3,
+                        "name": "熟悉的眼神——深圳宝安妇联反家暴宣传片",
+                        "intr": "",
+                        "pic": "images\/works\/case_5a33eb5e2f1bc.png",
+                        "likes": 32,
+                        "watchs": 1509
+                    }
+                ]
+            ]
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292985" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询导演列表信息 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292985" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292985&quot;,&quot;name&quot;:&quot;查询导演列表信息&quot;,&quot;url&quot;:&quot;{{url}}\/director\/list&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;type&quot;,&quot;value&quot;:&quot;3&quot;,&quot;not_null&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;类别编号(默认为全部)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/director/list</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>type</th>
+			                  			<td>3</td>
+                                        <td>必填</td>
+			                  			<td>类别编号(默认为全部)</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "did": 6,
+            "dname": "曾康愉",
+            "avatar": "images\/director\/director_home_58a6b2a6b1c04.jpg"
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292979" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询导演类别 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292979" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292979&quot;,&quot;name&quot;:&quot;查询导演类别&quot;,&quot;url&quot;:&quot;{{url}}\/director\/class&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/director/class</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>GET</code>
+                                                                        	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dc_id</th>
+			                  			<td colspan="2">导演类别编号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dc_name</th>
+			                  			<td colspan="2">导演类别名称</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "dc_id": 1,
+            "dc_name": "导演总监"
+        },
+        {
+            "dc_id": 2,
+            "dc_name": "资深导演"
+        },
+        {
+            "dc_id": 3,
+            "dc_name": "新锐导演"
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292975" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>为指定文章点赞 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292975" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292975&quot;,&quot;name&quot;:&quot;为指定文章点赞&quot;,&quot;url&quot;:&quot;{{url}}\/point\/good&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;id&quot;,&quot;value&quot;:&quot;1&quot;,&quot;not_null&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;文章唯一id&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;},{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/point/good</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>id</th>
+			                  			<td>1</td>
+                                        <td>必填</td>
+			                  			<td>文章唯一id</td>
+			                  		</tr>
+			                  				              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">likesCount</th>
+			                  			<td colspan="2">当前文章最新喜欢人数</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "likesCount": 25
+    }
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292960" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>为指定视频点赞 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292960" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292960&quot;,&quot;name&quot;:&quot;为指定视频点赞&quot;,&quot;url&quot;:&quot;{{url}}\/work\/good&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;id&quot;,&quot;value&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;视频唯一id号&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/work/good</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>id</th>
+			                  			<td>1</td>
+                                        <td>必填</td>
+			                  			<td>视频唯一id号</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">likesCount</th>
+			                  			<td colspan="2">最新喜欢人数</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "likesCount": 42
+    }
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			            		<h4>失败响应示例</h4>
+	            		<pre><code>{
+    "code": 400,
+    "msg": "faild"
+}</code></pre>
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292956" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>根据id查询指定视频详细信息 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292956" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292956&quot;,&quot;name&quot;:&quot;根据id查询指定视频详细信息&quot;,&quot;url&quot;:&quot;{{url}}\/work\/detail&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;id&quot;,&quot;value&quot;:&quot;1&quot;,&quot;not_null&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;视频唯一id号&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/work/detail</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>id</th>
+			                  			<td>1</td>
+                                        <td>必填</td>
+			                  			<td>视频唯一id号</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">id</th>
+			                  			<td colspan="2">视频唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">name</th>
+			                  			<td colspan="2">作品名称</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">url</th>
+			                  			<td colspan="2">视频地址</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">intr</th>
+			                  			<td colspan="2">作品描述</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">video_purpose</th>
+			                  			<td colspan="2">视频用途</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">video_type</th>
+			                  			<td colspan="2">视频形式</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">company_type</th>
+			                  			<td colspan="2">视频主体</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">video_region</th>
+			                  			<td colspan="2">视频领域</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">director_class</th>
+			                  			<td colspan="2">导演类别</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">likes</th>
+			                  			<td colspan="2">喜欢人数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">watchs</th>
+			                  			<td colspan="2">观看人数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pic</th>
+			                  			<td colspan="2">作品图片</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">director_id</th>
+			                  			<td colspan="2">导演id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">narrate</th>
+			                  			<td colspan="2">创意解说</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">comment</th>
+			                  			<td colspan="2">客户评价</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "id": 1,
+        "name": "灵山基金会为爱行走宣传片",
+        "url": "https:\/\/v.qq.com\/iframe\/player.html?vid=n0344snkp00&tiny=0&auto=1",
+        "intr": "为爱行走是由中国灵山公益慈善促进会和灵山慈善基金会联合发起主办的大型徒步公益活动，旨在倡导公众通过行走的方式参与公益，并通过团队的努力为民间公益项目筹款。 2013、2014年，为爱行走已经在无锡、成都成功举办，共计6457人组队参与，带动21431人进行捐款，总计为118个公益项目筹集3941837.88元筹款。2015年，为爱行走将在无锡、成都、广州、南京、张家港五个城市举办。",
+        "video_purpose": "2,3",
+        "video_type": 3,
+        "company_type": 2,
+        "video_region": "6",
+        "director_class": 1,
+        "likes": 37,
+        "watchs": 2690,
+        "pic": "images\/works\/case_58abe6850cbc9.png",
+        "director_id": 1,
+        "narrate": "本片通过一镜到底的特殊拍摄手法，将人们从小到大对于公益理解的变化阐述得一气呵成、生动形象；采用第一人称的角度，有助于公众更好地代入自身对公益的理解，被影片中“为爱行走”的倡议所感染，在行走的过程中找寻过去忽视的风景，汗水为贫困山区儿童搭建起知识的桥梁、用笑容为流浪者送去爱的关怀、用行动为需要帮助的人筹集爱心，从而帮助机构引导公众用徒步的方式参与到为爱行走的大型徒步公益活动中。",
+        "comment": "很久没有看到这么趣味盎然的项目宣传视频了，一镜到底的拍摄技术非常赞，一气呵成，思路流畅，通过主角在成长道路上的行走，对公益的理解也逐渐在成长，将为爱行走的主题讲述得淋漓尽致，帮助我们徒步公益项目的宣传和筹款，让更多人参与到我们的慈善活动中来，总体来说非常满意。"
+    }
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			            		<h4>失败响应示例</h4>
+	            		<pre><code>{
+    "code": 300,
+    "msg": "id is required",
+    "data": null
+}</code></pre>
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292949" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询视频列表信息 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292949" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292949&quot;,&quot;name&quot;:&quot;查询视频列表信息&quot;,&quot;url&quot;:&quot;{{url}}\/work\/list&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;video_purpose&quot;,&quot;value&quot;:&quot;2,3&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;视频用途(默认为不筛选)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;video_type&quot;,&quot;value&quot;:&quot;2&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;视频领域(默认为不筛选)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;video_region&quot;,&quot;value&quot;:&quot;3,4,5&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;视频形式(默认为不筛选)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;0&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;director_class&quot;,&quot;value&quot;:&quot;4&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;导演类别(默认为不筛选)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;0&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;company_type&quot;,&quot;value&quot;:&quot;5&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;视频主体(默认为不筛选)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;0&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;pageNumber&quot;,&quot;value&quot;:&quot;1&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;当前页码(默认为1)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;0&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;pageSize&quot;,&quot;value&quot;:&quot;12&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;每页数据量(默认为12)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;0&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/work/list</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>video_purpose</th>
+			                  			<td>2,3</td>
+                                        <td>选填</td>
+			                  			<td>视频用途(默认为不筛选)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>video_type</th>
+			                  			<td>2</td>
+                                        <td>选填</td>
+			                  			<td>视频领域(默认为不筛选)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>video_region</th>
+			                  			<td>3,4,5</td>
+                                        <td>选填</td>
+			                  			<td>视频形式(默认为不筛选)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>director_class</th>
+			                  			<td>4</td>
+                                        <td>选填</td>
+			                  			<td>导演类别(默认为不筛选)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>company_type</th>
+			                  			<td>5</td>
+                                        <td>选填</td>
+			                  			<td>视频主体(默认为不筛选)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>pageNumber</th>
+			                  			<td>1</td>
+                                        <td>选填</td>
+			                  			<td>当前页码(默认为1)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>pageSize</th>
+			                  			<td>12</td>
+                                        <td>选填</td>
+			                  			<td>每页数据量(默认为12)</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dataTotal</th>
+			                  			<td colspan="2">总数据量</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pageTotal</th>
+			                  			<td colspan="2">总页数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pageNumber</th>
+			                  			<td colspan="2">当前页码</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pageSize</th>
+			                  			<td colspan="2">每页数据量</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">id</th>
+			                  			<td colspan="2">作品唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">name</th>
+			                  			<td colspan="2">作品名称</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">url</th>
+			                  			<td colspan="2">作品视频链接</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">intr</th>
+			                  			<td colspan="2">作品简介</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">video_purpose</th>
+			                  			<td colspan="2">视频用途</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">video_type</th>
+			                  			<td colspan="2">视频形式</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">company_type</th>
+			                  			<td colspan="2">视频主体</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">video_region</th>
+			                  			<td colspan="2">视频领域</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">director_class</th>
+			                  			<td colspan="2">导演类别</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">likes</th>
+			                  			<td colspan="2">喜欢人数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">watchs</th>
+			                  			<td colspan="2">观看人数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pic</th>
+			                  			<td colspan="2">作品图片</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">director_id</th>
+			                  			<td colspan="2">导演id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">narrate</th>
+			                  			<td colspan="2">创意解说</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">comment</th>
+			                  			<td colspan="2">客户评价</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">did</th>
+			                  			<td colspan="2">导演id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dname</th>
+			                  			<td colspan="2">导演名称</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">avatar</th>
+			                  			<td colspan="2">导演照片</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">goodAt</th>
+			                  			<td colspan="2">擅长领域</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">cooperation</th>
+			                  			<td colspan="2">合作机构</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">worksCount</th>
+			                  			<td colspan="2">作品数量</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">experience</th>
+			                  			<td colspan="2">拍摄经验</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">repWorks</th>
+			                  			<td colspan="2">代表作品</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dc_id</th>
+			                  			<td colspan="2">导演类别id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dc_name</th>
+			                  			<td colspan="2">导演类别名称</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "dataTotal": 1,
+        "pageTotal": 1,
+        "pageNumber": 1,
+        "pageSize": 12,
+        "list": [
+            {
+                "id": 4,
+                "name": "绿芽基金会儿童性教育动画片",
+                "url": "https:\/\/v.qq.com\/iframe\/player.html?vid=c05092kthpt&tiny=0&auto=0",
+                "intr": "暨南大学导演系科班出身，曾操盘大型科普纪录片，主导项目的团队管理、策划方案、剧本大纲、分镜头脚本、拍摄统筹、剪辑脚本，以及对接制片组进行商务合作和发行推广工作。带队前往印度南部、云南香格里拉、洱源、广西南宁、内蒙古阿拉善、沈阳、通辽等地进行长期拍摄。",
+                "video_purpose": "2,3,4",
+                "video_type": 2,
+                "company_type": 2,
+                "video_region": "1,6",
+                "director_class": 1,
+                "likes": 41,
+                "watchs": 2545,
+                "pic": "images\/works\/case_5a33f08fcb943.png",
+                "director_id": 1,
+                "narrate": "",
+                "comment": "效率高。rnrn需要改进的地方是：有段时间不太清楚进度和流程，中途线上沟通脚本。后来剩下一周的时间见面了，沟通后知道说我们要定下来脚本，才能继续下面的绘画制作。rnrn嗯如果能够有一个大致的时间和流程安排，会更好。            ",
+                "did": 1,
+                "dname": "陈博文",
+                "avatar": "images\/director\/director_home_5ddc9d193f76f.jpg",
+                "goodAt": "助学\/教育,其他",
+                "cooperation": "歌路营,比亚迪,中国海洋石油",
+                "worksCount": 15,
+                "experience": 7,
+                "repWorks": "",
+                "dc_id": 1,
+                "dc_name": "导演总监"
+            }
+        ]
+    }
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292904" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询筛选条件 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292904" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292904&quot;,&quot;name&quot;:&quot;查询筛选条件&quot;,&quot;url&quot;:&quot;{{url}}\/work\/filte&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/work/filte</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>GET</code>
+                                                                        	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "video_purpose": [
+        {
+            "id": 1,
+            "name": "筹款"
+        },
+        {
+            "id": 2,
+            "name": "项目宣传"
+        },
+        {
+            "id": 3,
+            "name": "公众教育"
+        },
+        {
+            "id": 4,
+            "name": "机构形象宣传"
+        },
+        {
+            "id": 5,
+            "name": "活动花絮"
+        }
+    ],
+    "video_type": [
+        {
+            "id": 1,
+            "name": "动画"
+        },
+        {
+            "id": 2,
+            "name": "纪实片"
+        },
+        {
+            "id": 3,
+            "name": "剧情片"
+        },
+        {
+            "id": 4,
+            "name": "社会实验"
+        }
+    ],
+    "company_type": [
+        {
+            "id": 1,
+            "name": "政府\/事业单位"
+        },
+        {
+            "id": 2,
+            "name": "基金会"
+        },
+        {
+            "id": 3,
+            "name": "NGO"
+        },
+        {
+            "id": 4,
+            "name": "企业CSR"
+        }
+    ],
+    "director_class": [
+        {
+            "dc_id": 1,
+            "dc_name": "导演总监"
+        },
+        {
+            "dc_id": 2,
+            "dc_name": "资深导演"
+        },
+        {
+            "dc_id": 3,
+            "dc_name": "新锐导演"
+        }
+    ],
+    "video_region": [
+        {
+            "id": 1,
+            "name": "儿童"
+        },
+        {
+            "id": 2,
+            "name": "助学\/教育"
+        },
+        {
+            "id": 3,
+            "name": "助残"
+        },
+        {
+            "id": 4,
+            "name": "环保"
+        },
+        {
+            "id": 5,
+            "name": "其他"
+        },
+        {
+            "id": 6,
+            "name": "扶贫"
+        },
+        {
+            "id": 7,
+            "name": "行业支持"
+        },
+        {
+            "id": 8,
+            "name": "社区服务"
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292883" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>分页查询文章 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292883" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292883&quot;,&quot;name&quot;:&quot;分页查询文章&quot;,&quot;url&quot;:&quot;{{url}}\/point\/list&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;2&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;pc_number&quot;,&quot;value&quot;:&quot;1001&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;专栏编号(如果为空,默认查询所有专栏)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;psc_number&quot;,&quot;value&quot;:&quot;2001&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;主题编号(如果为空,默认查询所有主题,如果专栏与主题全部为空,则查询所有文章信息)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;page_number&quot;,&quot;value&quot;:&quot;1&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;当前页码(如果为空,默认为第一页)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;},{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;page_size&quot;,&quot;value&quot;:&quot;6&quot;,&quot;not_null&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;每页显示数据量(如果为空,默认为6条)&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;},{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/point/list</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>POST</code>
+                                                                            <h4>请求 Content-Type</h4>
+                            <code>application/x-www-form-urlencoded</code>
+                                                	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th>pc_number</th>
+			                  			<td>1001</td>
+                                        <td>选填</td>
+			                  			<td>专栏编号(如果为空,默认查询所有专栏)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>psc_number</th>
+			                  			<td>2001</td>
+                                        <td>选填</td>
+			                  			<td>主题编号(如果为空,默认查询所有主题,如果专栏与主题全部为空,则查询所有文章信息)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>page_number</th>
+			                  			<td>1</td>
+                                        <td>选填</td>
+			                  			<td>当前页码(如果为空,默认为第一页)</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th>page_size</th>
+			                  			<td>6</td>
+                                        <td>选填</td>
+			                  			<td>每页显示数据量(如果为空,默认为6条)</td>
+			                  		</tr>
+			                  				              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">dataTotal</th>
+			                  			<td colspan="2">总数据量</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pageTotal</th>
+			                  			<td colspan="2">总页数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pageNumber</th>
+			                  			<td colspan="2">当前页码</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pageSize</th>
+			                  			<td colspan="2">每页数据量</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">point_id</th>
+			                  			<td colspan="2">文章唯一id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pc_number</th>
+			                  			<td colspan="2">专栏id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">psc_number</th>
+			                  			<td colspan="2">主题id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">point_pic</th>
+			                  			<td colspan="2">文章图片</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">point_title</th>
+			                  			<td colspan="2">文章标题</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">point_intr</th>
+			                  			<td colspan="2">文章简介</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">point_watchCount</th>
+			                  			<td colspan="2">文章观看人数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">point_goodCount</th>
+			                  			<td colspan="2">文章点赞人数</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">point_sendTime</th>
+			                  			<td colspan="2">文章发表时间</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">point_content</th>
+			                  			<td colspan="2">文章主内容</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">isRec</th>
+			                  			<td colspan="2">是否为推荐(1为是,0为否)</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+	&quot;code&quot;: 200,
+	&quot;msg&quot;: &quot;success&quot;,
+	&quot;data&quot;: {
+		&quot;dataTotal&quot;: 2,
+		&quot;pageTotal&quot;: 1,
+		&quot;pageNnumber&quot;: 1,
+		&quot;pageSize&quot;: 6,
+		&quot;list&quot;: [
+			{
+				&quot;point_id&quot;: 1,
+				&quot;pc_number&quot;: 1001,
+				&quot;psc_number&quot;: 2001,
+				&quot;point_pic&quot;: &quot;images/point/spread_58b91eecdef3a.jpg&quot;,
+				&quot;point_title&quot;: &quot;三个广告公司不为人知的大坑，避开它们，视频质量有保证！&quot;,
+				&quot;point_intr&quot;: &quot;为了让我们公益人的声音传播得更加响亮、更加久远，不少公益同行选择与广告公司合作，用公益广告号召公众加入我们。但据一些公益人反映，本来美好的想法却遭遇了广告公司的超级大坑。&quot;,
+				&quot;point_watchCount&quot;: 270,
+				&quot;point_goodCount&quot;: 21,
+				&quot;point_sendTime&quot;: 1577722050,
+				&quot;point_content&quot;: &quot;&lt;p&gt;“充电5分钟，通话两小时”、“今年过节不收礼，收礼只收×××”……这些广告的流传度绝对不亚于每晚7点准时与大家见面的《新闻联播》，广告的威力也由此可见一斑。&lt;/p&gt;&lt;br&gt;&lt;p&gt;为了让我们公益人的声音传播得更加响亮、更加久远，不少公益同行选择与广告公司合作，用公益广告号召公众加入我们。但据一些公益人反映，本来美好的想法却遭遇了广告公司的超级大坑。&lt;/p&gt;&lt;br&gt;&lt;p&gt; 1.报价“坑”——艺术无价人有情，便宜一点行不行？ 本着“花好钱买好货”的原则，我们一般希望与稍大一些的广告公司合作。但实际与大公司接洽时才发现，“优质的”报价远远不是我们这些公益人能承担的。无可奈何之下，只能心有芥蒂地去跟相对较小的公司合作。但是，小公司的业务人员罗列的一项又一项费用也让人大跌眼镜。所谓的成本又是如何计算的，相加起来怎么就成天文数字了？ &lt;/p&gt;&lt;br&gt;&lt;p&gt; 2.时间“坑”——视频制作完成的日期都不确定？ 经过千辛万苦的谈判，付了定金，签了合同，我们满心欢喜地做着项目，只等着合同约定的时期。 &lt;/p&gt;&lt;br&gt;&lt;p&gt; 然而，当我们怀着激动的心情拨通广告公司电话时，对方却淡淡地告诉我们：“不好意思啊先生，本着为视频质量负责的态度，我们前期做了大量调研、策划、准备工作，一次次自我推翻、否定，中间经历了………所以，我们希望您能多给我们几天时间，我们保证最后呈现给您的作品使我们最棒的。” 当拖延症成为全行业的通病，难道就没有什么方法可以监督进程吗？ &lt;/p&gt;&lt;br&gt;&lt;p&gt; 3.视频质量“坑”——千辛万苦，等来的却是“杀马特”风？ 即使价格略高、时间拖延，可为了让更多人看到我们的公益广告，一些公益人咬咬牙也忍了。但是，看视频样片时才发现，要么是一本”动感影集“，要么是一部夹杂少许漫画的PPT轮播。更有甚者，一些公司打着“简洁美”的旗号，制作出的却是八竿子打不着的作品。 &lt;/p&gt;&lt;br&gt;&lt;p&gt;你以为最终的作品会是这样的：&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/1488526949270380.png&quot;/&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;活泼的动画风、时尚的电视台风格、精致的画面，处处合我口味！&lt;/p&gt;&lt;br&gt;&lt;p&gt;或是这样的：&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/1488526961254793.png&quot;/&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;纪实性照片直击观众内心。&lt;/p&gt;&lt;br&gt;&lt;p&gt;反正，绝对不是那些“妖艳贱货”。然而，实际上却是这样的：&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/1488526973862703.png&quot;&gt;&lt;img src=&quot;images/point_content/1488526985905118.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;“早知道是这样，就用这些钱去做一些有意义的项目，服务更多人。”&lt;/p&gt;&lt;br&gt;&lt;p&gt;其实，如果能在与广告公司的合作中避开前面的3个大坑，一般就不会收到“残废品”。为了避免各种大坑，小编这里给大家介绍的，是一个叫“看得见”的平台。&lt;/p&gt;&lt;br&gt;&lt;p&gt;【“看得见”是什么？】&lt;br&gt;“看得见”团队成员大部分都有公益组织从业经历，大家遇到的这些坑，“看得见”何尝不是深恶痛绝？幸运的是“看得见”有感于这些乱象，决心为公益人搭建一个行业领先的公益视频制作平台。&lt;/p&gt;&lt;br&gt;&lt;p&gt;【“看得见”的填坑大法】&lt;br&gt;1、报价透明看得见&lt;br&gt;针对客户的需求方案，我们仅需3分钟即为您定制专属报价单，价格构成一清二楚，与“大约✘✘万”说再见。&lt;/p&gt;&lt;br&gt;&lt;p&gt;2、进度流程看得见&lt;br&gt;签订合同后，您可以根据订单号在网站后台查询视频制作实时进度。同时，这样也可以监督“看得见”准时完成任务。&lt;/p&gt;&lt;br&gt;&lt;p&gt;3、视频质量看得见&lt;br&gt;“看得见”隶属“颗粒公益”旗下，专业服务公益行业，230+公益机构都是我们最亲密的小伙伴。所以，咱们公益人的需求，我们不仅“看得见”，而且看的更清晰。&lt;/p&gt;&lt;br&gt;&lt;p&gt;好话说太多容易变成吹牛，实际情况如何，点击右上角的“开始报价”免费为您评估方案。&lt;/p&gt;&quot;,
+				&quot;isRec&quot;: 1
+			},
+			{
+				&quot;point_id&quot;: 2,
+				&quot;pc_number&quot;: 1001,
+				&quot;psc_number&quot;: 2001,
+				&quot;point_pic&quot;: &quot;images/point/spread_58b91829083b1.jpg&quot;,
+				&quot;point_title&quot;: &quot;对你的项目宣传抓耳挠腮？不如讲个故事吧&quot;,
+				&quot;point_intr&quot;: &quot;在公益影像这个领域上，顾源源积累了大量的专业经验，利用镜头，颗粒公益讲述了两百多个公益故事。创始人在现场利用视频为听众剖析在互联网时代，如何用视频这一传播利器，快速占据观众的注意力，将想要表达的信息，告诉你的目标受众。&quot;,
+				&quot;point_watchCount&quot;: 295,
+				&quot;point_goodCount&quot;: 27,
+				&quot;point_sendTime&quot;: 1577725153,
+				&quot;point_content&quot;: &quot;&lt;p style=&quot;text-align: center;&quot;&gt;“怎样写一个吸引人的标题”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;“作为一个公益组织，如何利用更多的渠道来做一个推广”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;“如何组建一个组织的传播架构”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;“如何让千篇一律的活动的后记有新鲜感”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;“如何塑造一个好的画面感”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;......&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p style=&quot;text-align: center;&quot;&gt;这些问题，或许是每一个公益传播者，最为关心。&lt;/p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;p&gt;在第六届志愿服务广州交流会展馆的尽头，颗粒分馆进行最后一期，依旧是围绕公益传播，为每一位听众解疑答惑。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p2/1488524958988469.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p2/1488525105945871.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p2/1488524993741636.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;p style=&quot;text-align: center;&quot;&gt;嘉宾分享&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Ⅰ颗粒公益创始人顾源源分享：如何讲故事&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p2/1488525057984596.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;在公益影像这个领域上，顾源源积累了大量的专业经验，利用镜头，颗粒公益讲述了两百多个公益故事。创始人在现场利用视频为听众剖析在互联网时代，如何用视频这一传播利器，快速占据观众的注意力，将想要表达的信息，告诉你的目标受众。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;iframe src=&quot;https://v.qq.com/iframe/player.html?vid=i0352a7jgw4&amp;tiny=0&amp;auto=0&quot;frameborder=&quot;0&quot;width=&quot;100%&quot;height=&quot;498&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;颗粒宣传片作为讲故事的第一等级，做到了3个点：&lt;br&gt;1.让观众记住了一些关键词，至少知道了颗粒公益是拍视频的 。&lt;br&gt;2.颗粒公益拍过很多大牌公益组织，是有实力的。&lt;br&gt;3.传递出了颗粒公益是一个走心的组织。&lt;br&gt;通过一些我们熟悉的词汇来营造一些画面感，比一味地堆砌专业术语更容易让人记住。&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;iframe src=&quot;https://v.qq.com/iframe/player.html?vid=e03305cu7z0&amp;tiny=0&amp;auto=0&quot;frameborder=&quot;0&quot;width=&quot;100%&quot;height=&quot;498&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;为什么说某些流行音乐很洗脑，因为他在不断地重复。而颗粒公益为今年慈展会打造的快闪视频可谓历年慈展会宣传片的一股泥石流。不断重复近似魔性的背景音乐搭配飞速掠过的关键词，让人看完一遍再看一遍，根本停不下来。而慈展会宣传片的成功也有力地证明了我们在传播过程中两个重要的元素：&lt;/p&gt;&lt;p&gt;1.我们在传递信息时最重要的是让别人听懂&lt;br&gt;2.形式感的创新更容易吸引大众的眼球，以及烘托整个活动的创新主旋律。&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;iframe src=&quot;https://v.qq.com/iframe/player.html?vid=i01830ru5il&amp;tiny=0&amp;auto=0&quot;frameborder=&quot;0&quot;width=&quot;100%&quot;height=&quot;498&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;p&gt;很多时候我们已经成功地吸引了大众来看，但更重要的是，让这些人看完视频能够行动起来。这才是公益传播的目标。通过爱德基金会进城务工人员支持计划公益广告以及善行100活动宣传片的示例，阐述了打动人和共鸣是驱动力。我们在传播的时候往往会陷入向公众传达我们做了很多的怪圈，但其实传递出“我们做的还不够，我们还需要更努力”这样的信息更能打动人。&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;Ⅱ“别样”新媒体公众号主编、摄影师方瘦兽分享：如何利用图片讲一个好故事&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p2/1488525278435156.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;在每一个新媒体运营者的心里，可能都有一个10万+的梦。方瘦兽教你如何用好图片编辑来敲开10万+的大门。一个好的题图会让人有打开链接的欲望，一个好的头图是让人继续读下去的推动力，而一个出色的图片结尾决定会不会想要转发。方瘦兽分享了利用好图片的5大元素：&lt;br&gt;1.图片编辑：挑选合适的图片&lt;br&gt;2.氛围：通过照片的辅助可以让你减去一些文字的形容。&lt;br&gt;3.信息：一张图片所传达出来的信息是挑选图片的重要指标，让文字故事事半功倍。&lt;br&gt;4.时间：插入图片的时间或者说顺序直接影响故事的节奏感。&lt;br&gt;5.现场感：挑选合适氛围的照片，传达恰当的信息，把握合适的节奏，这些都是为了营造出一种现场感，让人觉得真实。&lt;br&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p2/1488525283861271.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;羊城公益咖啡馆－颗粒公益传播分馆到这已经结束了，但公益传播还在继续。在这个碎片化的时代，人们越来越不愿意花时间在文字信息的汲取上，或许影像和图片这样快速获取信息的方式会渐渐成为主流。但无论传播方式和传播渠道是什么，内容才是最主要的东西，而传播只是活动情景的再现。&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;我们很庆幸，在这个还不太完美的世界里，有这么多可爱的人们在用自己的点滴力量去感化身边的不美好，去努力传播善良正直的价值观。在每一期活动中，我们都聚拢了一大批公益传播者，他们不断用自己力量来传达公益理念，坚持着自己的初心。&lt;/p&gt;&quot;,
+				&quot;isRec&quot;: 1
+			}
+		]
+	}
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292870" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询主题栏目 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292870" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292870&quot;,&quot;name&quot;:&quot;查询主题栏目&quot;,&quot;url&quot;:&quot;{{url}}\/point\/subclass&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/point/subclass</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>GET</code>
+                                                                        	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">psc_id</th>
+			                  			<td colspan="2">主题编号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">psc_number</th>
+			                  			<td colspan="2">主题分类号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">psc_name</th>
+			                  			<td colspan="2">主题名</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "psc_id": 1,
+            "psc_number": 2001,
+            "psc_name": "品牌资讯"
+        },
+        {
+            "psc_id": 2,
+            "psc_number": 2002,
+            "psc_name": "拍片那些事"
+        },
+        {
+            "psc_id": 3,
+            "psc_number": 2003,
+            "psc_name": "影像创造改变"
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292869" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>查询专栏项目 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292869" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292869&quot;,&quot;name&quot;:&quot;查询专栏项目&quot;,&quot;url&quot;:&quot;{{url}}\/point\/class&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/point/class</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>GET</code>
+                                                                        	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pc_id</th>
+			                  			<td colspan="2">专栏id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pc_number</th>
+			                  			<td colspan="2">专栏分类编号</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">pc_name</th>
+			                  			<td colspan="2">专栏名称</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "pc_id": 1,
+            "pc_number": 1001,
+            "pc_name": "干货"
+        },
+        {
+            "pc_id": 2,
+            "pc_number": 1002,
+            "pc_name": "故事"
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="292828" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>推荐文章 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=292828" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;292828&quot;,&quot;name&quot;:&quot;推荐文章&quot;,&quot;url&quot;:&quot;{{url}}\/recPoint&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数值&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;description&quot;:&quot;&quot;,&quot;isencode&quot;:&quot;0&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/recPoint</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>GET</code>
+                                                                        	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+	&quot;code&quot;: 200,
+	&quot;msg&quot;: &quot;success&quot;,
+	&quot;data&quot;: [
+		{
+			&quot;point_id&quot;: 1,
+			&quot;pc_number&quot;: 1001,
+			&quot;psc_number&quot;: 2001,
+			&quot;point_pic&quot;: &quot;images/point/spread_58b91eecdef3a.jpg&quot;,
+			&quot;point_title&quot;: &quot;三个广告公司不为人知的大坑，避开它们，视频质量有保证！&quot;,
+			&quot;point_intr&quot;: &quot;为了让我们公益人的声音传播得更加响亮、更加久远，不少公益同行选择与广告公司合作，用公益广告号召公众加入我们。但据一些公益人反映，本来美好的想法却遭遇了广告公司的超级大坑。&quot;,
+			&quot;point_watchCount&quot;: 270,
+			&quot;point_goodCount&quot;: 21,
+			&quot;point_sendTime&quot;: 1577722050,
+			&quot;point_content&quot;: &quot;&lt;p&gt;“充电5分钟，通话两小时”、“今年过节不收礼，收礼只收×××”……这些广告的流传度绝对不亚于每晚7点准时与大家见面的《新闻联播》，广告的威力也由此可见一斑。&lt;/p&gt;&lt;br&gt;&lt;p&gt;为了让我们公益人的声音传播得更加响亮、更加久远，不少公益同行选择与广告公司合作，用公益广告号召公众加入我们。但据一些公益人反映，本来美好的想法却遭遇了广告公司的超级大坑。&lt;/p&gt;&lt;br&gt;&lt;p&gt; 1.报价“坑”——艺术无价人有情，便宜一点行不行？ 本着“花好钱买好货”的原则，我们一般希望与稍大一些的广告公司合作。但实际与大公司接洽时才发现，“优质的”报价远远不是我们这些公益人能承担的。无可奈何之下，只能心有芥蒂地去跟相对较小的公司合作。但是，小公司的业务人员罗列的一项又一项费用也让人大跌眼镜。所谓的成本又是如何计算的，相加起来怎么就成天文数字了？ &lt;/p&gt;&lt;br&gt;&lt;p&gt; 2.时间“坑”——视频制作完成的日期都不确定？ 经过千辛万苦的谈判，付了定金，签了合同，我们满心欢喜地做着项目，只等着合同约定的时期。 &lt;/p&gt;&lt;br&gt;&lt;p&gt; 然而，当我们怀着激动的心情拨通广告公司电话时，对方却淡淡地告诉我们：“不好意思啊先生，本着为视频质量负责的态度，我们前期做了大量调研、策划、准备工作，一次次自我推翻、否定，中间经历了………所以，我们希望您能多给我们几天时间，我们保证最后呈现给您的作品使我们最棒的。” 当拖延症成为全行业的通病，难道就没有什么方法可以监督进程吗？ &lt;/p&gt;&lt;br&gt;&lt;p&gt; 3.视频质量“坑”——千辛万苦，等来的却是“杀马特”风？ 即使价格略高、时间拖延，可为了让更多人看到我们的公益广告，一些公益人咬咬牙也忍了。但是，看视频样片时才发现，要么是一本”动感影集“，要么是一部夹杂少许漫画的PPT轮播。更有甚者，一些公司打着“简洁美”的旗号，制作出的却是八竿子打不着的作品。 &lt;/p&gt;&lt;br&gt;&lt;p&gt;你以为最终的作品会是这样的：&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/1488526949270380.png&quot;/&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;活泼的动画风、时尚的电视台风格、精致的画面，处处合我口味！&lt;/p&gt;&lt;br&gt;&lt;p&gt;或是这样的：&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/1488526961254793.png&quot;/&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;纪实性照片直击观众内心。&lt;/p&gt;&lt;br&gt;&lt;p&gt;反正，绝对不是那些“妖艳贱货”。然而，实际上却是这样的：&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/1488526973862703.png&quot;&gt;&lt;img src=&quot;images/point_content/1488526985905118.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;“早知道是这样，就用这些钱去做一些有意义的项目，服务更多人。”&lt;/p&gt;&lt;br&gt;&lt;p&gt;其实，如果能在与广告公司的合作中避开前面的3个大坑，一般就不会收到“残废品”。为了避免各种大坑，小编这里给大家介绍的，是一个叫“看得见”的平台。&lt;/p&gt;&lt;br&gt;&lt;p&gt;【“看得见”是什么？】&lt;br&gt;“看得见”团队成员大部分都有公益组织从业经历，大家遇到的这些坑，“看得见”何尝不是深恶痛绝？幸运的是“看得见”有感于这些乱象，决心为公益人搭建一个行业领先的公益视频制作平台。&lt;/p&gt;&lt;br&gt;&lt;p&gt;【“看得见”的填坑大法】&lt;br&gt;1、报价透明看得见&lt;br&gt;针对客户的需求方案，我们仅需3分钟即为您定制专属报价单，价格构成一清二楚，与“大约✘✘万”说再见。&lt;/p&gt;&lt;br&gt;&lt;p&gt;2、进度流程看得见&lt;br&gt;签订合同后，您可以根据订单号在网站后台查询视频制作实时进度。同时，这样也可以监督“看得见”准时完成任务。&lt;/p&gt;&lt;br&gt;&lt;p&gt;3、视频质量看得见&lt;br&gt;“看得见”隶属“颗粒公益”旗下，专业服务公益行业，230+公益机构都是我们最亲密的小伙伴。所以，咱们公益人的需求，我们不仅“看得见”，而且看的更清晰。&lt;/p&gt;&lt;br&gt;&lt;p&gt;好话说太多容易变成吹牛，实际情况如何，点击右上角的“开始报价”免费为您评估方案。&lt;/p&gt;&quot;,
+			&quot;isRec&quot;: 1
+		},
+		{
+			&quot;point_id&quot;: 2,
+			&quot;pc_number&quot;: 1001,
+			&quot;psc_number&quot;: 2001,
+			&quot;point_pic&quot;: &quot;images/point/spread_58b91829083b1.jpg&quot;,
+			&quot;point_title&quot;: &quot;对你的项目宣传抓耳挠腮？不如讲个故事吧&quot;,
+			&quot;point_intr&quot;: &quot;在公益影像这个领域上，顾源源积累了大量的专业经验，利用镜头，颗粒公益讲述了两百多个公益故事。创始人在现场利用视频为听众剖析在互联网时代，如何用视频这一传播利器，快速占据观众的注意力，将想要表达的信息，告诉你的目标受众。&quot;,
+			&quot;point_watchCount&quot;: 295,
+			&quot;point_goodCount&quot;: 27,
+			&quot;point_sendTime&quot;: 1577725153,
+			&quot;point_content&quot;: &quot;&lt;p style=&quot;text-align: center;&quot;&gt;“怎样写一个吸引人的标题”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;“作为一个公益组织，如何利用更多的渠道来做一个推广”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;“如何组建一个组织的传播架构”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;“如何让千篇一律的活动的后记有新鲜感”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;“如何塑造一个好的画面感”&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;......&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p style=&quot;text-align: center;&quot;&gt;这些问题，或许是每一个公益传播者，最为关心。&lt;/p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;p&gt;在第六届志愿服务广州交流会展馆的尽头，颗粒分馆进行最后一期，依旧是围绕公益传播，为每一位听众解疑答惑。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:5050/images/point_content/p2/1488524958988469.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:5050/images/point_content/p2/1488525105945871.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:5050/images/point_content/p2/1488524993741636.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;p style=&quot;text-align: center;&quot;&gt;嘉宾分享&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Ⅰ颗粒公益创始人顾源源分享：如何讲故事&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:5050/images/point_content/p2/1488525057984596.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;在公益影像这个领域上，顾源源积累了大量的专业经验，利用镜头，颗粒公益讲述了两百多个公益故事。创始人在现场利用视频为听众剖析在互联网时代，如何用视频这一传播利器，快速占据观众的注意力，将想要表达的信息，告诉你的目标受众。&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;iframe src=&quot;https://v.qq.com/iframe/player.html?vid=i0352a7jgw4&amp;tiny=0&amp;auto=0&quot;frameborder=&quot;0&quot;width=&quot;100%&quot;height=&quot;498&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;颗粒宣传片作为讲故事的第一等级，做到了3个点：&lt;br&gt;1.让观众记住了一些关键词，至少知道了颗粒公益是拍视频的 。&lt;br&gt;2.颗粒公益拍过很多大牌公益组织，是有实力的。&lt;br&gt;3.传递出了颗粒公益是一个走心的组织。&lt;br&gt;通过一些我们熟悉的词汇来营造一些画面感，比一味地堆砌专业术语更容易让人记住。&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;iframe src=&quot;https://v.qq.com/iframe/player.html?vid=e03305cu7z0&amp;tiny=0&amp;auto=0&quot;frameborder=&quot;0&quot;width=&quot;100%&quot;height=&quot;498&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;为什么说某些流行音乐很洗脑，因为他在不断地重复。而颗粒公益为今年慈展会打造的快闪视频可谓历年慈展会宣传片的一股泥石流。不断重复近似魔性的背景音乐搭配飞速掠过的关键词，让人看完一遍再看一遍，根本停不下来。而慈展会宣传片的成功也有力地证明了我们在传播过程中两个重要的元素：&lt;/p&gt;&lt;p&gt;1.我们在传递信息时最重要的是让别人听懂&lt;br&gt;2.形式感的创新更容易吸引大众的眼球，以及烘托整个活动的创新主旋律。&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;iframe src=&quot;https://v.qq.com/iframe/player.html?vid=i01830ru5il&amp;tiny=0&amp;auto=0&quot;frameborder=&quot;0&quot;width=&quot;100%&quot;height=&quot;498&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;p&gt;很多时候我们已经成功地吸引了大众来看，但更重要的是，让这些人看完视频能够行动起来。这才是公益传播的目标。通过爱德基金会进城务工人员支持计划公益广告以及善行100活动宣传片的示例，阐述了打动人和共鸣是驱动力。我们在传播的时候往往会陷入向公众传达我们做了很多的怪圈，但其实传递出“我们做的还不够，我们还需要更努力”这样的信息更能打动人。&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;Ⅱ“别样”新媒体公众号主编、摄影师方瘦兽分享：如何利用图片讲一个好故事&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:5050/images/point_content/p2/1488525278435156.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;在每一个新媒体运营者的心里，可能都有一个10万+的梦。方瘦兽教你如何用好图片编辑来敲开10万+的大门。一个好的题图会让人有打开链接的欲望，一个好的头图是让人继续读下去的推动力，而一个出色的图片结尾决定会不会想要转发。方瘦兽分享了利用好图片的5大元素：&lt;br&gt;1.图片编辑：挑选合适的图片&lt;br&gt;2.氛围：通过照片的辅助可以让你减去一些文字的形容。&lt;br&gt;3.信息：一张图片所传达出来的信息是挑选图片的重要指标，让文字故事事半功倍。&lt;br&gt;4.时间：插入图片的时间或者说顺序直接影响故事的节奏感。&lt;br&gt;5.现场感：挑选合适氛围的照片，传达恰当的信息，把握合适的节奏，这些都是为了营造出一种现场感，让人觉得真实。&lt;br&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:5050/images/point_content/p2/1488525283861271.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;羊城公益咖啡馆－颗粒公益传播分馆到这已经结束了，但公益传播还在继续。在这个碎片化的时代，人们越来越不愿意花时间在文字信息的汲取上，或许影像和图片这样快速获取信息的方式会渐渐成为主流。但无论传播方式和传播渠道是什么，内容才是最主要的东西，而传播只是活动情景的再现。&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;我们很庆幸，在这个还不太完美的世界里，有这么多可爱的人们在用自己的点滴力量去感化身边的不美好，去努力传播善良正直的价值观。在每一期活动中，我们都聚拢了一大批公益传播者，他们不断用自己力量来传达公益理念，坚持着自己的初心。&lt;/p&gt;&quot;,
+			&quot;isRec&quot;: 1
+		},
+		{
+			&quot;point_id&quot;: 3,
+			&quot;pc_number&quot;: 1001,
+			&quot;psc_number&quot;: 2002,
+			&quot;point_pic&quot;: &quot;images/point/spread_58bd30e8810ed.jpg&quot;,
+			&quot;point_title&quot;: &quot;拍摄手记 | 好久不见，小时候家门口小摊的豆浆和油条&quot;,
+			&quot;point_intr&quot;: &quot;我怀念小时候弄堂里那个送牛奶的小推车，仿佛送来的不只是牛奶，更是温暖。我喜欢门口小卖部的盐水棒冰，炎炎夏日里咬上一口，就冰冻了整个燥热。我习惯出门前喝一碗小摊的咸豆浆，配一根炸酥的油条，每个桌前都升腾起一股热腾腾的水蒸气，车水马龙的吵闹就在这股热气里静谧了。&quot;,
+			&quot;point_watchCount&quot;: 118,
+			&quot;point_goodCount&quot;: 2,
+			&quot;point_sendTime&quot;: 1577725153,
+			&quot;point_content&quot;: &quot;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;&lt;iframe frameborder=&quot;0&quot; width=&quot;100%&quot; height=&quot;498&quot; src=&quot;https://v.qq.com/iframe/player.html?vid=l03372n1stm&amp;amp;tiny=0&amp;amp;auto=0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;社区融合倡导片&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;合作方：上海新途健康促进社&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;我怀念小时候弄堂里那个送牛奶的小推车，仿佛送来的不只是牛奶，更是温暖。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;我喜欢门口小卖部的盐水棒冰，炎炎夏日里咬上一口，就冰冻了整个燥热。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;我习惯出门前喝一碗小摊的咸豆浆，配一根炸酥的油条，每个桌前都升腾起一股热腾腾的水蒸气，车水马龙的吵闹就在这股热气里静谧了。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p3/1488793440796093.jpg&quot; &gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;后来呀，弄堂变成了高层小区，砖瓦变成混凝土，楼房越建越漂亮越变越多姿，但是社区的故事却仿佛被混凝土染成了灰色，高高的楼宇阻隔了人们之间的交流，社区的故事变得单调无味甚至冷漠。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;社区，是孕育了小家的大家，它不该是这个样子。它理应充满欢笑，温馨与酸甜苦辣，理应充满浓浓的烟火气。我有一部很喜欢的韩剧叫做《请回答1988》，它讲述了我心中最美好的社区的样子。有夫妻吵架，其他人会去劝架。哪家吵了一锅菜，家家都会尝到味道。如果下了雪，大家都会出来打雪仗。如今我们似乎拥有了现代化的一切，却遗失了最美好的人情味。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p3/1488793449177378.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;在这个不大不小的四方天地里，每个小小的灯光下都在上演着不一样的故事。社区在某种程度上是社会的缩影。随着都市化进程的加速，社区的功能和作用也正在不断演化。如何更好地促进社区融合，是众多公益组织一直努力的方向。这样的倡导视频，能帮助机构更好地阐释“社区融合”的理念，以生活出发，让“融合”的理念，抵达每一位居民的内心。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;h1&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;; font-size: 14px;&quot;&gt;拍摄手记：&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;; font-size: 14px;&quot;&gt;李朝晖 颗粒公益导演&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;在我们的拍摄想法里，我们觉得社区是一个每个人都融入其中的东西，于是我们选择一些平时生活中比较常见的画面来体现社区的美好，也比较容易引起共鸣。&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;; color: rgb(0, 0, 0);&quot;&gt;&lt;strong&gt;在我们拍摄过程中，发现了社区本身并未挖掘出来的价值，然后我们用镜头替它表现出来，这是比较可贵的一个地方。&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;我们深入到社区里面去寻找素材的时候，也真的感受到那份温情，人与人互相鼓励，互相扶持的时候空气里浮动的层层暖流仿佛也流进了我们心里。这是这个视频的意义，我们希望通过这些日常小事，能唤起大家对于社区的记忆。只有大家对社区有了认同有了共鸣，融合才不会是一件难事。&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;; color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;img src=&quot;images/point_content/p3/1488793470772113.jpg&quot; &gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑, &amp;quot;Microsoft YaHei&amp;quot;;&quot;&gt;很多人担心社区正在消失，但值得庆幸的是，一直有这么一群人在努力地促进社区融合。社区里渐渐又响起了孩童们欢乐的笑声，老人们不再独守空房结识了棋友牌友，每逢佳节社区都热闹非凡。在这个世界上，往往最熟悉的才最容易遗忘，我们每天在匆匆的脚步里是不是丢失了什么更值得珍惜的东西呢。社区的温暖值得我们一起守护，无论你关注社区坏境、文化、经济、医疗、科技的哪个方面，只要你愿意踏出改变的第一步，社区就会因你而美好!&lt;/span&gt;&lt;/p&gt;&quot;,
+			&quot;isRec&quot;: 1
+		}
+	]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      	                        	    	<div class="page-wrapper hide" tabindex="289311" role="main">
+	        	<div class="page-inner">
+	          		<section class="markdown-section">
+	            		<h1 class="api-name-class"><i class="fa fa-link" aria-hidden="true"></i>轮播图信息 <button  type="button" data-href="https://www.apipost.cn/client.php?project_id=44313&apiid=289311" class="btn btn-gray api-test-send-btn"  data-clipboard-text="{&quot;apiid&quot;:&quot;289311&quot;,&quot;name&quot;:&quot;轮播图信息&quot;,&quot;url&quot;:&quot;{{url}}\/slides&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;mark&quot;:&quot;developing&quot;,&quot;request_type&quot;:&quot;1&quot;,&quot;request_header_ischecked&quot;:&quot;0&quot;,&quot;request_query_ischecked&quot;:&quot;0&quot;,&quot;request_body_ischecked&quot;:&quot;1&quot;,&quot;auth&quot;:[],&quot;request_header&quot;:[],&quot;request_query&quot;:[],&quot;request_body&quot;:[{&quot;description&quot;:&quot;&quot;,&quot;indent&quot;:&quot;0&quot;,&quot;key&quot;:&quot;&quot;,&quot;not_null&quot;:&quot;0&quot;,&quot;placeholder&quot;:&quot;参数描述，用于生成文档&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;value&quot;:&quot;&quot;,&quot;is_para_checked&quot;:&quot;1&quot;}],&quot;request_raw_body&quot;:&quot;&quot;}"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>接口测试</button> </h1>
+	            		                        	            		<h4>接口URL</h4>
+	            		<code>{{url}}/slides</code>
+                        	            		<h4>请求方式</h4>
+	            		<code>GET</code>
+                                                                        	            		<!-- 开始 request_all_header -->
+	            		
+	            		<!-- 开始 request_header -->
+	            		
+	            		<!-- 开始 request_body -->
+                        	            			            			            		<div class="document-block-div request_body-div">
+		            		<h4>请求Body参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+                                        <th style="width: 30%">示例值</th>
+                                        <th style="width: 7%">必填</th>
+			                  			<th style="width:35%">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              						              			</tbody>
+		            		</table>
+		            	</div>
+	            								                        
+						<!-- 开始 request_Query -->
+	            		
+	            		<!-- 开始 response_header -->
+	            		
+	            		<!-- 开始 response_cookie -->
+	            		
+	            		<!-- 开始 response_body -->
+	            			            		<div class="document-block-div response_body-div">
+		            		<h4>响应参数</h4>
+		            		<table>
+		              			<thead>
+		                			<tr>
+			                  			<th style="width: 28%">参数</th>
+			                  			<th  style="width: 72%"colspan="2">参数描述</th>
+			                  		</tr>
+		              			</thead>
+		              			<tbody>
+		              						              						              				<tr>
+			                  			<th style="text-indent: 0em">code</th>
+			                  			<td colspan="2">200:成功  300:核心参数缺少  400:服务器错误或根据参数未找到指定数据</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">msg</th>
+			                  			<td colspan="2">错误码说明</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">slides_id</th>
+			                  			<td colspan="2">轮播图id</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">slides_pic</th>
+			                  			<td colspan="2">轮播图图片</td>
+			                  		</tr>
+			                  				              						              						              				<tr>
+			                  			<th style="text-indent: 0em">slides_href</th>
+			                  			<td colspan="2">轮播图链接</td>
+			                  		</tr>
+			                  				              						              			</tbody>
+		            		</table>
+		            	</div>
+	            		
+	            		<!-- 开始 response_body_text_ishide -->
+	            			            		<h4>成功响应示例</h4>
+	            		<pre><code>{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "slides_id": 1,
+            "slides_pic": "images\/index\/slides-1.jpg",
+            "slides_href": "video.html?video_id=1"
+        },
+        {
+            "slides_id": 2,
+            "slides_pic": "images\/index\/slides-2.jpg",
+            "slides_href": "video.html?video_id=2"
+        },
+        {
+            "slides_id": 3,
+            "slides_pic": "images\/index\/slides-3.jpg",
+            "slides_href": "video.html?video_id=3"
+        }
+    ]
+}</code></pre>
+	            		
+	            		<!-- 开始 response_body_error_text -->
+	            			          		</section>
+	        	</div>
+	      	</div>
+            	      		      	<footer>
+	      		本文档由<a href="https://www.apipost.cn/?fr=doc" target="_blank">APIPOST接口调试与管理工具</a>生成
+	      	</footer>
+	    </div>
+	    <a href="javascript:;" class="navigation navigation-prev">
+	      	<i class="fa fa-angle-left" aria-hidden="true"></i>
+	    </a>
+	    <a href="javascript:;" class="navigation navigation-next" style="margin-right: 17px;">
+	      	<i class="fa fa-angle-right" aria-hidden="true"></i>
+	    </a>
+	</div>
+</div>
+<!-- 百度统计 -->
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?a046ce178828e393614822a297b8d296";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+<span style="display: none;"><script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1276797738&web_id=1276797738"></script></span>
+</body>
+</html>
